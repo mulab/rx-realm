@@ -2,47 +2,50 @@
 # rx-realm
 A lightweight wrapper around realm-java which introduces reactive stream semantics to SQL operations.(Inspired by square/sqlbrite)
 
-## Usage
+## Setup
 
 Add the JitPack repository to your build file:
-```
+```gradle
 repositories {
-        // ...
-        maven { url "https://jitpack.io" }
+    // ...
+    maven { url "https://jitpack.io" }
 }
 ```
-Add the dependency 
-```
+
+Add the dependency:
+```gradle
 dependencies {
     compile 'com.github.mulab:rx-realm:1.0.0'
 }
 ```
 
-init in your `Appliction#onCreate` method.
-```
+Initialize (in `Appliction#onCreate` method for Android App):
+```java
 RealmConfiguration config = new RealmConfiguration.Builder(context)
     // set configuration for realm, see realm-java's document
     .build();
 RealmDatabase.init(config);
 ```
 
-Query
-```
+## Usages
+
+### Query
+```java
 RealmDatabase.createQuery(new Query()<Foo>{
-  @Override
-  public RealmResults<Foo> call(Realm realm) {
-    return realm.where(Foo.class).findAll();
-  }
+    @Override
+    public RealmResults<Foo> call(Realm realm) {
+        return realm.where(Foo.class).findAll();
+    }
 }, Foo.class).subscribe(this);
 ```
 The last parameter of createQuery means watching on `Foo` if it is notified.
 
-Exec
-```
+### Exec
+```java
 RealmDatabase.exec(new Exec() {
     @Override
     public void run(Realm realm) {
-      realm.where(Foo.class).findAll().clear();
+        realm.where(Foo.class).findAll().clear();
     }
 }, Foo.class).subscribe(this);
 ```
