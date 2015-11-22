@@ -1,4 +1,5 @@
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-rx--realm-green.svg?style=true)](https://android-arsenal.com/details/1/2803)
+[![Build Status](https://travis-ci.org/mulab/rx-realm.svg?branch=master)](https://travis-ci.org/mulab/rx-realm)
 # rx-realm
 A lightweight wrapper around realm-java which introduces reactive stream semantics to SQL operations.(Inspired by square/sqlbrite)
 
