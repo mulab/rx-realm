@@ -30,6 +30,8 @@ RealmDatabase.init(config);
 
 ## Usages
 
+Assume that `Foo` is a realm data model, i.e. `Foo extends RealmObject`.([see more in Realm-java's documentation](https://realm.io/docs/java/latest/#models))
+
 ### Query
 ```java
 RealmDatabase.createQuery(new Query()<Foo>{
