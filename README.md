@@ -16,7 +16,8 @@ repositories {
 Add the dependency:
 ```gradle
 dependencies {
-    compile 'com.github.mulab:rx-realm:1.0.0'
+    compile 'com.github.mulab:rx-realm:1.1.0'
+    compile 'io.realm:realm-android:0.85.1'
 }
 ```
 
