@@ -1,3 +1,5 @@
+** Deprecated! From realm-java 0.87.0 and on, it has builtin observable support **
+
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-rx--realm-green.svg?style=true)](https://android-arsenal.com/details/1/2803)
 [![Build Status](https://travis-ci.org/mulab/rx-realm.svg?branch=master)](https://travis-ci.org/mulab/rx-realm)
 # rx-realm
@@ -16,8 +18,8 @@ repositories {
 Add the dependency:
 ```gradle
 dependencies {
-    compile 'com.github.mulab:rx-realm:1.1.0'
-    compile 'io.realm:realm-android:0.85.1'
+    compile 'com.github.mulab:rx-realm:1.2.0'
+    compile 'io.realm:realm-android:0.86.1'
 }
 ```
 
